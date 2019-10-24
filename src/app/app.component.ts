@@ -18,7 +18,7 @@ export class AppComponent implements OnInit{
 
   
 
-  title = 'angular7crud';
+  title = 'mean1';
   version;
   constructor(private _loadingBar: SlimLoadingBarService, private _router: Router,private bs: BusinessService) {
     this._router.events.subscribe((event: Event) => {

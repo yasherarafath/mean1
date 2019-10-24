@@ -14,7 +14,8 @@ mongoose.connect(config.DB, { useNewUrlParser: true }).then(
 var version=process.env.version || "1.0"
 
 const app = express();
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
+app.use(bodyParser.json({ type: 'application/*+json' }))
 app.use(cors());
 app.use(express.static(path.join(__dirname,'../dist/angular7crud')));
 
