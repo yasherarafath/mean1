@@ -7,10 +7,11 @@ let Business = require('../models/Business');
 
 // Defined store route
 businessRoutes.route('/add').post(function (req, res) {
+  console.log(11111); 
   let business = new Business(req.body);
   business.save()
     .then(business => {
-      res.status(200).json({'business': 'business in added successfully'});
+      res.status(200).json({'business': 'business in added successfully111'});
     })
     .catch(err => {
     res.status(400).send("unable to save to database");

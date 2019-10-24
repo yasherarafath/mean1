@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BusinessService {
 
-  uri = '/business';
-  versionuri = '/getversion';
+  uri = 'http://localhost:4000/business';
+  versionuri = 'http://localhost:4000/getversion';
 
   constructor(private http: HttpClient) { }
 
@@ -17,6 +17,12 @@ export class BusinessService {
       business_name: business_name,
       business_gst_number: business_gst_number
     };
+
+    // const obj = new HttpParams()
+    //   .set('person_name' , person_name)
+    //   .set('business_name', business_name)
+    //   .set('business_gst_number', business_gst_number);
+
     this.http.post(`${this.uri}/add`, obj)
         .subscribe(res => console.log('Done'));
   }
