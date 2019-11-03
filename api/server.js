@@ -20,7 +20,7 @@ app.use(cors());
 app.use(express.static(path.join(__dirname,'../dist/angular7crud')));
 
 app.get('/getversion',function(req,res){
-  console.log('Version '+version);
+  console.log('Version from backend '+version);
   res.status(200).json({version:version})
 });
 app.use('/business', businessRoute);
