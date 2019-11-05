@@ -18,11 +18,6 @@ export class BusinessService {
       business_gst_number: business_gst_number
     };
 
-    // const obj = new HttpParams()
-    //   .set('person_name' , person_name)
-    //   .set('business_name', business_name)
-    //   .set('business_gst_number', business_gst_number);
-
     this.http.post(`${this.uri}/add`, obj)
         .subscribe(res => console.log('Done'));
   }
@@ -60,7 +55,7 @@ export class BusinessService {
 
  deleteBusiness(id) {
     return this
-              .http
-              .get(`${this.uri}/delete/${id}`);
+            .http
+            .get(`${this.uri}/delete/${id}`);
   }
 }
